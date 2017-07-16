@@ -1,0 +1,14 @@
+{
+    "name": "goforbroke1006/hello-codecept",
+    "authors": [
+        {
+            "name": "Sergey Cherkesov",
+            "email": "go.for.broke1006@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "require-dev": {
+        "codeception/codeception": "2.3"
+    }
+}

@@ -1,0 +1,11 @@
+/.idea/
+
+tests/_data/users.yml
+/tests/_output/*
+!/tests/_output/.gitkeep
+/tests/_support/_generated/
+
+/vendor/
+chromedriver
+composer.lock
+selenium-server-standalone-*.jar

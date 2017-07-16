@@ -1,0 +1,4 @@
+users:
+    - { login: 'admin', password: 'qwerty', roles: [ 'ADMIN' ] }
+    - { login: 'user01', password: '123456', roles: [ 'USER' ] }
+    - { login: 'user02', password: '123qwe', roles: [ 'USER' ] }
