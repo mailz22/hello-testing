@@ -7,5 +7,6 @@ tests/_data/users.yml
 
 /vendor/
 chromedriver
+chromedriver.exe
 composer.lock
 selenium-server-standalone-*.jar

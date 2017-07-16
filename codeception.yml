@@ -6,7 +6,7 @@ suites:
         modules:
             enabled:
                 - WebDriver:
-                    url: https://stackoverflow.com/
+                    url: http://dev-prost.f32.ru/
                     browser: chrome
                 - \Helper\Acceptance
                 - \Helper\ProtectedUserRepo
