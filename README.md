@@ -2,7 +2,7 @@
 
 ## What is it for?
 
-With this project I can easiely start to write accptance (integration) tests.
+With this project I can easiely start to write acceptance (integration) tests.
 
 
 ### How use
