@@ -20,8 +20,6 @@ class LoginCest
         $I->fillField('#password', $user->getPassword());
         $I->click('#submit-button');
 
-        $I->wantTo('The email or password is incorrect.');
-
         $I->amOnPage('/');
 
         $I->seeElement('.my-profile');
