@@ -7,13 +7,9 @@ class HomePageCest
         $I->amOnPage('/');
     }
 
-    public function loginSuccessfully(AcceptanceTester $I)
+    public function hasMainMenu(AcceptanceTester $I)
     {
-//        $I->see('Россия');
-    }
-
-    public function loginWithInvalidPassword(AcceptanceTester $I)
-    {
-        // write a negative login test
+        $I->seeLink('Questions');
+        $I->seeLink('Tags');
     }
 }

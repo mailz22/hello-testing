@@ -14,3 +14,4 @@ With this project I can easiely start to write acceptance (integration) tests.
 ### Helpers
 
 1. **ProtectedUserRepo** - it allows you store account credentials (logins and passwords) in separated files, which excluded from git.
+2. **Wildfowl** - some useful function for your test.
