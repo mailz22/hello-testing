@@ -5,6 +5,11 @@
 With this project I can easiely start to write accptance (integration) tests.
 
 
+### How use
+
+1. Run requirements.sh at first time for installation Selenium, ChromeDrive.
+2. Run up.sh for running Selenium and tests.
+
 
 ### Helpers
 
