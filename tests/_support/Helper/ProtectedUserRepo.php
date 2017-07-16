@@ -13,7 +13,8 @@ class ProtectedUserRepo extends \Codeception\Module
 
     /**
      * @param array $roles
-     * @return \Model\UserModel
+     * @return UserModel
+     * @throws \Exception
      */
     public function getRandUserByRoles(array $roles = [])
     {
@@ -30,6 +31,10 @@ class ProtectedUserRepo extends \Codeception\Module
             }
         } else {
             $filtered = $this->usersCache;
+        }
+
+        if (0 == count($filtered)) {
+            throw new \Exception('\'' . implode(', ', $roles) . '\' user not found!');
         }
 
         return $filtered[rand(0, count($filtered) - 1)];
