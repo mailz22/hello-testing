@@ -10,3 +10,5 @@ chromedriver
 chromedriver.exe
 composer.lock
 selenium-server-standalone-*.jar
+composer.phar
+selenium-server-standalone.jar

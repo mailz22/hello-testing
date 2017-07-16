@@ -10,6 +10,7 @@ suites:
                     browser: chrome
                 - \Helper\Acceptance
                 - \Helper\ProtectedUserRepo
+                - \Helper\Wildfowl
 
 extensions:
     enabled: [Codeception\Extension\RunFailed]

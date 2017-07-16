@@ -3,17 +3,18 @@
 namespace Helper;
 
 use Codeception\Exception\ContentNotFound;
+use Codeception\Module;
 use Model\UserModel;
 use Symfony\Component\Yaml\Yaml;
 
-class ProtectedUserRepo extends \Codeception\Module
+class ProtectedUserRepo extends Module
 {
     /** @var null|array|UserModel[] */
     private $usersCache = null;
 
     /**
      * @param array $roles
-     * @return UserModel
+     * @return \Model\UserModel
      * @throws \Exception
      */
     public function getRandUserByRoles(array $roles = [])
