@@ -5,7 +5,7 @@ PORT=4444
 
 check_selenium_start () {
     while ! nc -z localhost $PORT; do
-        sleep 0.5 # wait for 1/2 of the second before check again
+        sleep 0.5
     done
 }
 
@@ -14,6 +14,5 @@ java -jar $SELENIUM start -Dwebdriver.chrome.driver=./chromedriver > /dev/null &
 
 pid=$(ps -ax | grep $SELENIUM | grep -v ' grep ' | awk '{print $1}')
 if [ ! -z "$pid" ]; then
-#    echo $pid
     kill -9 $pid
 fi
