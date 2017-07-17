@@ -3,16 +3,34 @@
 SELENIUM="selenium-server-standalone.jar"
 PORT=4444
 
+if [ "$(uname)" == "Darwin" ]; then
+    OS_TYPE="MAC_OS"
+    DRIVER_FILE="./chromedriver"
+    CODECEPT="vendor/bin/codecept"
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    OS_TYPE="LINUX"
+    DRIVER_FILE="./chromedriver"
+    CODECEPT="vendor/bin/codecept"
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+    OS_TYPE="WINDOWS"
+    DRIVER_FILE="./chromedriver.exe"
+    CODECEPT="vendor/bin/codecept.bat"
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+    OS_TYPE="WINDOWS"
+    DRIVER_FILE="./chromedriver.exe"
+    CODECEPT="vendor/bin/codecept.bat"
+fi
+
 check_selenium_start () {
-    while ! nc -z localhost $PORT; do
+    while ! nc -z localhost ${PORT}; do
         sleep 0.5
     done
 }
 
-java -jar $SELENIUM start -Dwebdriver.chrome.driver=./chromedriver > /dev/null & \
-    (check_selenium_start && vendor/bin/codecept run --steps)
+java -jar ${SELENIUM} start -Dwebdriver.chrome.driver=${DRIVER_FILE} > /dev/null & \
+    (check_selenium_start && ${CODECEPT} run --steps)
 
-pid=$(ps -ax | grep $SELENIUM | grep -v ' grep ' | awk '{print $1}')
+pid=$(ps -ax | grep ${SELENIUM} | grep -v ' grep ' | awk '{print $1}')
 if [ ! -z "$pid" ]; then
     kill -9 $pid
 fi
