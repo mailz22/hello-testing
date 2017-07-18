@@ -23,7 +23,7 @@ class Wildfowl extends Module
         if (null == $parent) {
             return $webDriverModule->_findElements($selector);
         } else {
-            return $parent->findElements(WebDriverBy::cssSelector('.question-hyperlink'));
+            return $parent->findElements(WebDriverBy::cssSelector($selector));
         }
     }
 
