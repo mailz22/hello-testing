@@ -6,7 +6,6 @@ class LoginCest
     {
         $I->amOnPage('/');
         $I->click('Log In');
-//        $I->seeCurrentUrlEquals('/users/login');
         $I->canSeeInCurrentUrl('/users/login');
     }
 
