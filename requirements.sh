@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-curl -o composer.phar https://getcomposer.org/composer.phar -O composer.phar
+curl -o composer.phar https://getcomposer.org/composer.phar
 php composer.phar install
 
 curl -o selenium-server-standalone.jar http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar
