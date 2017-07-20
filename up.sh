@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Manual start test ->
+# In two separate terminals run it:
+#       $ java -jar selenium-server-standalone.jar start -Dwebdriver.chrome.driver=./chromedriver
+#       $ vendor/bin/codecept run --steps
+
 SELENIUM="selenium-server-standalone.jar"
 PORT=4444
 
@@ -32,5 +37,5 @@ java -jar ${SELENIUM} start -Dwebdriver.chrome.driver=${DRIVER_FILE} > /dev/null
 
 pid=$(ps -ax | grep ${SELENIUM} | grep -v ' grep ' | awk '{print $1}')
 if [ ! -z "$pid" ]; then
-    kill -9 $pid
+    kill -9 ${pid}
 fi
