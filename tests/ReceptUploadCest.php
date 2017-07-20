@@ -15,7 +15,6 @@ class ReceptUploadCest
         $I->amOnPage('/');
         $I->click('.js_call_login');
 
-
         $user = $I->getRandUserByRoles(['USERProst']);
 
         $I->fillField('#app__simple_logon_login', $user->getUsername());
