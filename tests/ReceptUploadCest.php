@@ -10,7 +10,7 @@ class ReceptUploadCest
 {
     public function loginSuccessfully(AcceptanceTester $I)
     {
-        $I->wantTo('Ensure that login work fine for correct credentials');
+        $I->wantTo('Ensure that add recipe form works fine!');
 
         $I->amOnPage('/');
         $I->click('.js_call_login');
